@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3498db</color>
+    <color name="colorPrimaryDark">#2980b9</color>
+    <color name="colorAccent">#34495e</color>
+    <color name="colorMain">#2c3e50</color>
+    <color name="colorMainAction">#34495e</color>
+    <color name="colorMainActionLight">#45617d</color>
+    <color name="colorMainActionDark">#233140</color>
+    <color name="colorText">#ffffff</color>
+    <color name="colorMarker">#1abc9c</color>
+    <color name="colorBox">#f1c40f</color>
+    <color name="colorBox2">#c0392b</color>
+    <color name="colorBox3">#9b59b6</color>
+    <color name="colorBlock">#ecf0f1</color>
+</resources>

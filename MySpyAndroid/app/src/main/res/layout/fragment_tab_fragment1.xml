@@ -1,0 +1,32 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.myspy.myspyandroid.TabFragment1"
+    android:fitsSystemWindows="true"
+    android:paddingBottom="?android:attr/actionBarSize">
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <com.github.mikephil.charting.charts.BarChart
+            android:id="@+id/chartSMSInfo"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp" />
+
+
+        <com.github.mikephil.charting.charts.PieChart
+            android:id="@+id/chartCallInfo"
+            android:layout_width="match_parent"
+            android:layout_marginBottom="10dp"
+            android:layout_height="400dp" />
+    </LinearLayout>
+
+
+</ScrollView>

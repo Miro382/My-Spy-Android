@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/activity_smsreport"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.myspy.myspyandroid.Reports.SMSReportActivity">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.Toolbar
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/colorPrimary"
+                    android:theme="?attr/actionBarTheme"
+                    android:minHeight="?attr/actionBarSize"
+                    android:id="@+id/toolbardate" />
+
+                <TextView
+                    android:text="@string/SMSSended"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/smssended"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:text="@string/SMSReceived"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/smsreceived"
+                    android:textColor="@android:color/black" />
+
+                <Button
+                    android:text="@string/readsms"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/button8"
+                    android:background="@drawable/buttonstylerounded"
+                    android:textSize="18sp"
+                    android:textColor="@android:color/white"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="8dp"
+                    android:onClick="ReadSMS" />
+
+                <com.github.mikephil.charting.charts.PieChart
+                    android:id="@+id/chartSMSStats"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_marginTop="10dp" />
+
+                <com.github.mikephil.charting.charts.BarChart
+                    android:id="@+id/SMSInfochart"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:layout_marginTop="20dp" />
+            </LinearLayout>
+        </ScrollView>
+
+
+        <!--
+        <android.support.design.widget.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            app:srcCompat="@drawable/back"
+            android:id="@+id/floatingActionButton4"
+            app:fabSize="mini"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="15dp"
+            android:onClick="GoBack" />
+            !-->
+
+
+    </RelativeLayout>
+
+</android.support.design.widget.CoordinatorLayout>

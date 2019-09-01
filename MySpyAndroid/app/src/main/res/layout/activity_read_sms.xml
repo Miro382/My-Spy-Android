@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_read_sms"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.myspy.myspyandroid.Reports.ReadSMSActivity"
+    android:background="@color/colorMainActionLight">
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:theme="?attr/actionBarTheme"
+        android:minHeight="?attr/actionBarSize"
+        android:id="@+id/toolbarreadsms" />
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinnerSMS"
+        android:spinnerMode="dropdown"
+        android:layout_below="@+id/toolbarreadsms"
+        style="@style/spinner_style" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinnerFilterLayout"
+        android:layout_below="@+id/spinnerSMS">
+
+        <Spinner
+            android:id="@+id/spinnerFilter"
+            android:spinnerMode="dropdown"
+            android:layout_below="@+id/toolbarreadsms"
+            style="@style/spinner_style"
+            android:layout_width="0dp"
+            android:layout_weight=".5"/>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".5">
+
+            <TextView
+                android:text="@string/SMSReadLegendSent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView14"
+                android:gravity="center_vertical|center_horizontal"
+                android:textColor="@color/colorPrimaryDark" />
+
+            <TextView
+                android:text="@string/SMSReadLegendRec"
+                android:layout_height="match_parent"
+                android:id="@+id/textView13"
+                android:layout_width="match_parent"
+                android:gravity="center_vertical|center_horizontal"
+                android:textColor="@android:color/black" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/spinnerFilterLayout"
+        android:background="@android:color/white">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/activity_vertical_margin"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/spinnerSMS"
+            android:id="@+id/SMSReadLayout">
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

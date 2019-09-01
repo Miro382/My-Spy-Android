@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#34495e"
+    tools:context="com.myspy.myspyandroid.MainActivity">
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:id="@+id/imageView"
+        android:layout_height="100dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:src="@drawable/title"
+        android:scaleType="centerCrop" />
+
+
+    <TextView
+        android:text="@string/app_name_short"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:id="@+id/textViewMySpy"
+        android:textColor="@color/colorText"
+        android:textSize="40sp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:text="@string/Welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView3"
+        android:textColor="@color/colorText"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/imageView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorMarker"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:id="@+id/WeatherLayout"
+                android:visibility="gone">
+
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="20dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/city"
+                        android:id="@+id/imageView5"
+                        android:paddingLeft="10dp" />
+
+                    <TextView
+                        android:text="---"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:id="@+id/textViewlocationweather"
+                        android:layout_weight="1"
+                        android:fontFamily="sans-serif"
+                        android:gravity="center_vertical"
+                        android:textSize="16sp"
+                        android:textColor="@android:color/white"
+                        android:layout_marginLeft="10dp"
+                        android:textStyle="normal|bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/temperature"
+                        android:id="@+id/imageView6"
+                        android:layout_marginLeft="16dp" />
+
+                    <TextView
+                        android:text="0"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:id="@+id/textViewtemperature"
+                        android:textSize="20sp"
+                        android:textColor="@android:color/white"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dp" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2.95">
+
+                        <TextView
+                            android:text="0%"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:id="@+id/textViewhumidity"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:textColor="@android:color/white"
+                            android:textSize="20sp"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginRight="16dp"
+                            android:paddingLeft="8dp" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/humidity"
+                            android:id="@+id/imageView7"
+                            android:layout_weight="1"
+                            android:layout_alignParentTop="true"
+                            android:layout_toLeftOf="@+id/textViewhumidity"
+                            android:layout_toStartOf="@+id/textViewhumidity" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+
+                <RelativeLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:paddingBottom="10dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/precipitation"
+                        android:id="@+id/imageView8"
+                        android:layout_weight="1"
+                        android:layout_alignParentRight="false"
+                        android:layout_alignParentEnd="false" />
+
+                    <TextView
+                        android:text="100 mm"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:id="@+id/textViewprecipitation"
+                        android:textSize="20sp"
+                        android:textColor="@android:color/white"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dp"
+                        android:layout_weight="1"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/imageView8"
+                        android:layout_toEndOf="@+id/imageView8" />
+
+                    <TextView
+                        android:text="100"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:id="@+id/textViewcloudiness"
+                        android:textSize="20sp"
+                        android:textColor="@android:color/white"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dp"
+                        android:layout_alignBaseline="@+id/textViewprecipitation"
+                        android:layout_alignBottom="@+id/textViewprecipitation"
+                        android:layout_toRightOf="@+id/imageView9"
+                        android:layout_centerVertical="true" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/clouds"
+                        android:id="@+id/imageView9"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true" />
+
+                    <ImageView
+                        android:id="@+id/imageViewWeather"
+                        android:src="@drawable/missing"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginRight="10dp"
+                        android:scaleType="fitCenter"
+                        android:layout_width="42dp"
+                        android:layout_height="42dp" />
+                </RelativeLayout>
+
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="6dp">
+
+                    <TextView
+                        android:text="@string/METCredits"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView21"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="@android:color/white" />
+
+                    <TextView
+                        android:text="---"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textViewDate"
+                        android:layout_weight="1"
+                        android:layout_marginRight="10dp"
+                        android:gravity="right"
+                        android:textColor="@android:color/white"
+                        android:textSize="10sp" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+            <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/tablestyle">
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="16dp">
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:src="@drawable/sentsms"
+                            android:id="@+id/imageView10"
+                            android:layout_weight="1"
+                            android:layout_height="40dp" />
+
+                        <TextView
+                            android:text="0"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:id="@+id/textViewsmssentcount"
+                            android:gravity="center"
+                            android:textColor="@android:color/white"
+                            android:textSize="20sp"
+                            android:layout_weight="1"/>
+
+                        <Space android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:layout_width="10dp" />
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:src="@drawable/receivedsms"
+                            android:id="@+id/imageView11"
+                            android:layout_weight="1"
+                            android:layout_height="40dp" />
+
+                        <TextView
+                            android:text="0"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:id="@+id/textViewsmsreceivedcount"
+                            android:textColor="@android:color/white"
+                            android:textSize="20sp"
+                            android:gravity="center"
+                            android:layout_weight="1"/>
+
+                    </TableRow>
+
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/tablestyle"
+                        android:paddingBottom="6dp"
+                        android:paddingTop="6dp"
+                        android:paddingLeft="4dp"
+                        android:paddingRight="4dp">
+
+                        <ImageView
+                            android:src="@drawable/callmadesmall"
+                            android:id="@+id/imageView12"
+                            android:layout_weight="1"
+                            android:layout_gravity="center"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp" />
+
+                        <TextView
+                            android:text="0"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:id="@+id/textViewmadecallscount"
+                            android:gravity="center"
+                            android:textColor="@android:color/white"
+                            android:textSize="20sp"
+                            android:layout_weight="1"/>
+
+                        <ImageView
+                            android:src="@drawable/time"
+                            android:id="@+id/imageView14"
+                            android:layout_weight="1"
+                            android:layout_width="30dp"
+                            android:layout_height="40dp" />
+
+                        <TextView
+                            android:text="00:00"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:id="@+id/textViewmadecallslength"
+                            android:gravity="center"
+                            android:textColor="@color/colorBox"
+                            android:textSize="18sp"
+                            android:layout_weight="1"/>
+
+                        <Space android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:layout_width="10dp" />
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:src="@drawable/callreceivedsmall"
+                            android:id="@+id/imageView13"
+                            android:layout_weight="1"
+                            android:layout_height="40dp" />
+
+                        <TextView
+                            android:text="0"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:id="@+id/textViewreceivedcallscount"
+                            android:textColor="@android:color/white"
+                            android:textSize="20sp"
+                            android:gravity="center"
+                            android:layout_weight="1"/>
+
+                        <ImageView
+                            android:src="@drawable/time"
+                            android:id="@+id/imageView15"
+                            android:layout_weight="1"
+                            android:layout_width="30dp"
+                            android:layout_height="40dp" />
+
+                        <TextView
+                            android:text="00:00"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:id="@+id/textViewreceivedcallslength"
+                            android:gravity="center"
+                            android:textColor="@color/colorBox"
+                            android:textSize="18sp"
+                            android:layout_weight="1"/>
+
+                    </TableRow>
+
+
+                </TableLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+    <Button
+        android:text="@string/AdminLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewMySpy"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/button"
+        android:onClick="ToAdminLogin"
+        android:background="@drawable/buttonstylerounded"
+        android:textColor="@android:color/white"
+        android:layout_marginRight="4dp" />
+
+
+</RelativeLayout>

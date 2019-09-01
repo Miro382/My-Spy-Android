@@ -1,0 +1,93 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.myspy.myspyandroid.TabFragment2">
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:clipToPadding="false"
+            android:fillViewport="true"
+            android:fitsSystemWindows="true"
+            android:paddingBottom="?android:attr/actionBarSize">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                        <Button
+                            android:id="@+id/buttontosmsreport"
+                            android:layout_width="match_parent"
+                            android:layout_height="100dp"
+                            android:background="@drawable/buttonstyle"
+                            android:drawableLeft="@drawable/message"
+                            android:gravity="center_vertical|end"
+                            android:onClick="ToSMSReport"
+                            android:text="@string/SMSReports"
+                            android:textColor="@color/colorText"
+                            android:textSize="18sp" />
+
+                        <Button
+                            android:id="@+id/buttontocallsreport"
+                            android:layout_width="match_parent"
+                            android:layout_height="100dp"
+                            android:background="@drawable/buttonstylelight"
+                            android:drawableLeft="@drawable/call"
+                            android:gravity="center_vertical|end"
+                            android:onClick="ToCallsReport"
+                            android:text="@string/CallReports"
+                            android:textColor="@color/colorText"
+                            android:textSize="18sp" />
+
+
+                        <Button
+                            android:id="@+id/buttontoMap"
+                            android:layout_width="match_parent"
+                            android:layout_height="100dp"
+                            android:background="@drawable/buttonstyle"
+                            android:drawableLeft="@drawable/map"
+                            android:gravity="center_vertical|end"
+                            android:onClick="ToMapReport"
+                            android:text="@string/LocationReport"
+                            android:textColor="@color/colorText"
+                            android:textSize="18sp" />
+
+
+                        <Button
+                            android:id="@+id/buttontoAppReport"
+                            android:layout_width="match_parent"
+                            android:layout_height="100dp"
+                            android:background="@drawable/buttonstylelight"
+                            android:drawableLeft="@drawable/applications"
+                            android:gravity="center_vertical|end"
+                            android:onClick="ToAppReport"
+                            android:text="@string/ApplicationsReport"
+                            android:textColor="@color/colorText"
+                            android:textSize="18sp" />
+
+
+                        <Button
+                            android:id="@+id/buttonremovereports"
+                            android:layout_width="match_parent"
+                            android:layout_height="100dp"
+                            android:background="@drawable/buttonstyle"
+                            android:drawableLeft="@drawable/remove"
+                            android:gravity="center_vertical|end"
+                            android:onClick="ToRemoveReport"
+                            android:text="@string/RemoveReports"
+                            android:textColor="@color/colorText"
+                            android:textSize="18sp" />
+
+
+                </LinearLayout>
+        </ScrollView>
+
+
+</RelativeLayout>
